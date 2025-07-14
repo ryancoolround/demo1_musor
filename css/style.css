@@ -1,0 +1,315 @@
+    /* Reset и базовые стили */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #1b2735, #090a0f);
+      color: #eee;
+      min-height: 100vh;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a {
+      color: #ffb347;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    a:hover, a:focus {
+      color: #ffd580;
+      outline: none;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(27, 39, 53, 0.95);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.7);
+      z-index: 1000;
+      user-select: none;
+    }
+    header h1 {
+      font-weight: 900;
+      font-size: 1.6rem;
+      letter-spacing: 0.1em;
+    }
+    nav {
+      display: flex;
+      gap: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.9rem;
+    }
+    nav a {
+      cursor: pointer;
+    }
+
+    /* Hero */
+    .hero {
+      max-width: 900px;
+      margin: 60px auto 80px;
+      background: rgba(255, 179, 71, 0.15);
+      padding: 60px 30px 50px;
+      border-radius: 20px;
+      text-align: center;
+    }
+    .hero h2 {
+      font-weight: 900;
+      font-size: 3.4rem;
+      margin: 0 0 20px;
+      color: #ffb347;
+      text-shadow: 0 0 12px rgba(255,179,71,0.7);
+      user-select: text;
+    }
+    .hero p {
+      font-weight: 600;
+      font-size: 1.3rem;
+      margin-bottom: 40px;
+      color: #ffd580cc;
+      user-select: text;
+    }
+    .hero button {
+      background: #ffb347;
+      border: none;
+      padding: 18px 64px;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: #1b2735;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 8px 24px rgba(255, 179, 71, 0.7);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+    }
+    .hero button:hover,
+    .hero button:focus {
+      background: #ffd580;
+      box-shadow: 0 12px 40px rgba(255, 213, 128, 0.9);
+      transform: translateY(-6px);
+      outline: none;
+    }
+
+    /* Услуги */
+    section {
+      max-width: 900px;
+      margin: 0 auto 70px;
+      padding: 40px 30px;
+      background: rgba(27, 39, 53, 0.7);
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+      user-select: none;
+    }
+    section h2 {
+      color: #ffb347;
+      font-weight: 900;
+      font-size: 2.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+      text-shadow: 0 0 12px rgba(255,179,71,0.7);
+    }
+    #uslugi ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 22px;
+      padding: 0;
+      list-style: none;
+    }
+    #uslugi ul li {
+      background: rgba(255, 179, 71, 0.3);
+      padding: 18px 30px;
+      border-radius: 40px;
+      font-weight: 700;
+      font-size: 1.2rem;
+      color: #1b2735;
+      min-width: 180px;
+      text-align: center;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      cursor: default;
+      user-select: none;
+    }
+    #uslugi ul li:hover {
+      background: #ffb347;
+      color: #1b2735;
+      box-shadow: 0 0 35px #ffb347;
+    }
+
+    /* Калькулятор */
+    #calc form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 480px;
+      margin: 0 auto;
+      font-weight: 600;
+      color: #ffd580;
+    }
+    label {
+      display: flex;
+      flex-direction: column;
+      font-size: 1rem;
+    }
+    input, select, textarea {
+      margin-top: 6px;
+      padding: 14px 20px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      border-radius: 12px;
+      border: none;
+      background: #1b2735;
+      color: #ffd580;
+      box-shadow: inset 0 0 8px rgba(255, 179, 71, 0.3);
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+      resize: vertical;
+    }
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      box-shadow: 0 0 15px #ffb347;
+      background-color: #294e61;
+      color: #fff;
+    }
+    button.calc-btn {
+      background: #ffb347;
+      color: #1b2735;
+      font-weight: 900;
+      padding: 18px 0;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 179, 71, 0.7);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      font-size: 1.3rem;
+    }
+    button.calc-btn:hover,
+    button.calc-btn:focus {
+      background: #ffd580;
+      box-shadow: 0 10px 30px rgba(255, 213, 128, 0.9);
+      transform: translateY(-5px);
+      outline: none;
+    }
+    .result {
+      margin-top: 20px;
+      text-align: center;
+      font-weight: 900;
+      font-size: 1.4rem;
+      color: #ffb347;
+      text-shadow: 0 0 15px rgba(255, 179, 71, 0.9);
+      user-select: none;
+      min-height: 40px;
+    }
+
+    /* Форма заявки */
+    #contact form {
+      max-width: 480px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      color: #ffd580;
+      font-weight: 600;
+    }
+    #contact input, #contact textarea {
+      background: #1b2735;
+      color: #ffd580;
+      padding: 14px 20px;
+      border-radius: 12px;
+      border: none;
+      font-size: 1.1rem;
+      box-shadow: inset 0 0 8px rgba(255, 179, 71, 0.3);
+      transition: box-shadow 0.3s ease, background-color 0.3s ease;
+      resize: vertical;
+    }
+    #contact input:focus, #contact textarea:focus {
+      outline: none;
+      box-shadow: 0 0 15px #ffb347;
+      background-color: #294e61;
+      color: #fff;
+    }
+    #contact button {
+      background: #ffb347;
+      color: #1b2735;
+      font-weight: 900;
+      padding: 18px 0;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 8px 25px rgba(255, 179, 71, 0.7);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      user-select: none;
+      font-size: 1.3rem;
+    }
+    #contact button:hover,
+    #contact button:focus {
+      background: #ffd580;
+      box-shadow: 0 10px 30px rgba(255, 213, 128, 0.9);
+      transform: translateY(-5px);
+      outline: none;
+    }
+
+    /* Футер */
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      color: #888;
+      user-select: none;
+      margin-bottom: 20px;
+    }
+
+    /* Адаптив */
+    @media (max-width: 720px) {
+      .hero h2 {
+        font-size: 2.6rem;
+      }
+      section {
+        margin: 40px 20px 60px;
+        padding: 30px 20px;
+      }
+      nav {
+        gap: 16px;
+        font-size: 0.85rem;
+      }
+      #uslugi ul li {
+        min-width: 140px;
+        font-size: 1rem;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 15px;
+      }
+      nav {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+        gap: 12px;
+      }
+      nav a {
+        font-size: 0.8rem;
+      }
+      .hero h2 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      section {
+        margin: 30px 10px 40px;
+        padding: 25px 15px;
+      }
+      #calc form,
+      #contact form {
+        max-width: 100%;
+      }
+    }
